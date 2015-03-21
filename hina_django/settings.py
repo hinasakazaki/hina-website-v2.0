@@ -64,13 +64,12 @@ WSGI_APPLICATION = 'hina_django.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/1.7/ref/settings/#databases
-# import dj_database_url
-# DATABASES['default'] =  dj_database_url.config()
+
 
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 #new version#
-DATABASES = {}
+DATABASES = {} #this line is important
 import dj_database_url
 DATABASES['default'] = dj_database_url.config()
 # Enable Connection Pooling
@@ -113,10 +112,10 @@ STATICFILES_DIRS = (
 # https://warehouse.python.org/project/whitenoise/
 
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
-#old
+# #old
 # STATIC_URL = '/static/'
 
-# STATIC_ROOT = ''
+# STATIC_ROOT = 'static'
 
 # STATICFILES_DIRS = [(os.path.join(BASE_DIR, 'static/'))]
 
@@ -132,6 +131,6 @@ TEMPLATE_LOADERS = (
 #     'django.template.loaders.eggs.Loader',
 )
 
-MEDIA_ROOT = ''
+MEDIA_ROOT = 'mediafiles'
 
 MEDIA_URL = '/media/'
