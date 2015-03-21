@@ -71,6 +71,7 @@ SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 #new version#
 import dj_database_url
+DATABASES = {}
 DATABASE_URL = 'postgresql:///postgresql'
 DATABASES['default'] = dj_database_url.config()
 # Enable Connection Pooling
