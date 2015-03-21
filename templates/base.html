@@ -1,0 +1,60 @@
+
+<html>
+  <head>
+
+    {% load static %}
+
+    <link rel="icon" type="image/x-icon" href="{{ STATIC_URL }}ico/favicon.ico" />
+    <link rel="icon" type="image/png" href="{{ STATIC_URL}} ico/favicon.png" />
+
+    <meta name="description" content="Computer Science and Economics 4th year student at UC Berkeley, game developer, trombonist and artist on the side.">
+    <meta name="keywords" content="games, Hina Sakazaki, Hina, hinasakazaki, software engineer, UC Berkeley, Gunn High School, HTML,CSS,XML,JavaScript">
+    <meta name="author" content="Hina Sakazaki">
+
+    <title>{% block title %}{% endblock %} HINA SAKAZAKI</title>
+
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/{% block css_file %}{% endblock %}">
+    <!-- google fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Gentium Book Basic' rel='stylesheet' type='text/css'>
+
+    <!-- js -->
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="{{ STATIC_URL }}js/hinasakazaki.js"></script>
+    <script src="{{ STATIC_URL }}js/{% block js_file %}{% endblock %}"></script>
+  </head>
+
+  <body>
+
+    <div id = "header">
+        <div id="nameplate"> <a href = "/index/"> HINASAKAZAKI </a> </div>
+
+        <div id="menu">
+          <div class="menu-item"> <a href = "/projects/"> projects. </a> </div>
+          <div class="menu-item"> <a href = "/comix/"> webcomics. </a> </div>
+          <div class="menu-item"> <a href = "/fotos/"> photography. </a> </div>
+          <div class="menu-item"> <a href = "/contact/"> contact. </a> </div>
+        </div>
+
+    </div>
+
+    <div id = "header2">
+          <div class="menu-item2"> <a href = "/index/"> hinasakazaki. </a> </div>
+          <div class="menu-item2"> <a href = "/projects/"> projects. </a> </div>
+          <div class="menu-item2"> <a href = "/comix/"> webcomics. </a> </div>
+          <div class="menu-item2"> <a href = "/fotos/"> photography. </a> </div>
+          <div class="menu-item2"> <a href = "/contact/"> contact. </a> </div>
+    </div>
+
+    	
+	    <div id = "content">
+	    	{% block content %} {% endblock %}
+		  </div>
+  
+<!-- 	  <div id="footer">
+	  &copy; Hina Sakazaki 2015
+	  </div> -->
+	  </body>
+
+</html>

@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+{% block title %}Home{% endblock %}
+<!-- {% block css_file %}index.css{% endblock %} -->
+{% block js_file %}index.js{% endblock %}
+{% block content %}
+		<div id = "box-wrapper">
+    		<div class= "yellow-block">
+          <div class = "yellowtext"> <a href="/projects/">
+            Look at my projects! </a>
+          </div>
+          
+          <div class=hinerz>
+    			 <img src="{{ STATIC_URL }}img/index/welcome.png" alt="@swaggerzaki" height= "300" width="300">
+          </div>
+    		</div>
+
+    		<div class = "red-block">
+    			<div class = "redtext">  <a href = "https://twitter.com/swaggerzaki">
+    				Check out my Twitter @swaggerzaki </a>
+    			</div>
+    		
+    			 <div class = "hinerz"> 
+    			 	 <img src="{{ STATIC_URL }}img/index/swag.png" alt="@swaggerzaki" height= "300" width="250"> 
+    			 	</div>
+
+  			</div>
+
+
+    		<div class = "pink-block">
+          <div class = "pinktext">  <a href = "/comix/">
+            Do you like webcomics? </a>
+          </div>
+         
+            <div class="hinerz">
+    			     <img src="{{ STATIC_URL }}img/index/nya.gif" alt="@swaggerzaki" height= "300" width="300">  
+           </div>
+             		</div>
+    	</div>
+
+      <div id = "text">
+          <div id = "brown">
+          {% autoescape off %}
+          {% if archives %}
+            {% if all_posts %}
+              {% for post in all_posts %}
+                <li> <div class= "link"> <a href = "/blog/{{ post.id }}/">{{ post.post_title }} </a> </div> from {{ post.pub_date }}</li> 
+              {% endfor %}
+            {% else %}
+              <p> No archive available </p>
+            {% endif %}
+          
+          {% else %}
+            {% if latest_post %}
+              {{latest_post.pub_date}}
+              <br>
+              {{latest_post.post_title}}
+              <br> <br> 
+              {{latest_post.post_text}}
+            {% else %}
+            <p> No posts available </p>
+            {% endif %}
+
+            <br>
+            <br> 
+            <div class="link"> <a href= "/blog/archive"> Archive of Blog Posts by hinerz</a> </div>
+          {% endif %}
+          {% endautoescape %}
+
+      </div>
+    </div>
+{% endblock %}

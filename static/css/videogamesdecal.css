@@ -1,0 +1,85 @@
+body {
+	font-family: 'Noto Serif', serif;
+	margin: 0;
+	height: 100%; 
+	font-size: 20;
+}
+
+#colors {
+	background-color: #084c61;
+	/*dark blue*/
+	background-color: #2ea9bf; 
+	/*light blue*/
+	color: #f5316c;
+	/*dark pink*/
+	color: #630b0a;
+	/*reddish brown*/
+	color: #f0b624;
+	/*yellow*/
+	color: #e35e39;
+	/*orange*/
+}
+
+#header {
+	font-family: 'Nova Square', sans-serif;
+	color: #084c61; 
+	position: fixed;
+	display:inline-block;
+	width:100%;
+	background-color: #2ea9bf;
+	padding:20 25;
+	height:150;
+}
+
+#nameplate {
+	float: left;
+	padding-left:50;
+	padding-top: 25;
+	padding-bottom: 25;
+	font-size: 40;	
+}
+#nameplate a {
+	text-decoration: none;
+	color:inherit;
+}
+#nameplate:hover {
+	color: #f5316c;
+}
+
+#menu { 
+	color:#084c61;
+	position: relative;
+	display:inline-block;
+	float: left;
+	padding-left:150;
+	padding-top:25;
+	width:300px;
+	height:100%;
+}
+
+#menu-item {
+	width:300px;
+	display:inline-block;
+	padding-right: 50px;
+	font:50px;
+	padding-bottom:30px;
+}
+#menu-item:hover {
+	color:#f0b624;
+}
+#menu-item a {
+	text-decoration: none;
+	color:inherit;
+}
+
+#content {
+	background-color: #e1f4f8;
+	padding-top:200px;
+	width:100%;
+	text-align: center;
+	height:100%;
+}
+#heading {
+	font-weight:50;
+	color:#e35e39;
+}
