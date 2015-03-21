@@ -72,11 +72,20 @@ SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 #new version#
 import dj_database_url
 DATABASES = {}
+ DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql_psycopg2',
+            'NAME': 'postgresql',
+        }
+    }
 DATABASE_URL = 'postgresql:///postgresql'
-DATABASES['default'] = dj_database_url.config()
+# DATABASES['default'] = dj_database_url.config()
 # Enable Connection Pooling
-DATABASES['default']['ENGINE'] = 'django_postgrespool'
+# DATABASES['default']['ENGINE'] = 'django_postgrespool'
 
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+
+ALLOWED_HOSTS = ['*']
 # This works for SQLite
 #DATABASES = {
 #     'default': {
