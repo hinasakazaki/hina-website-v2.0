@@ -14,7 +14,9 @@ application = DjangoWhiteNoise(application)
 
 #OLD
 import os
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "hina_django.settings")
+os.environ['DJANGO_SETTINGS_MODULE'] = 'hina_django.settings'
+
+# os.environ.setdefault("DJANGO_SETTINGS_MODULE", "hina_django.settings")
 
 # from django.core.wsgi import get_wsgi_application
 # application = get_wsgi_application()
