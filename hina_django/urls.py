@@ -4,7 +4,7 @@ from hina_django import views
 
 urlpatterns = patterns('',
     # Examples:
-    url(r'^$', 'hina_django.views.index', name='home'),
+    url(r'^$', include('blog.urls')),
     url(r'^index/', include('blog.urls')),
     url(r'^comix/', include('comix.urls')),
     url(r'^projects/', include('projects.urls')),
