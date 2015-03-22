@@ -16,17 +16,19 @@
           
           {% else %}
             {% if latest_post %}
-              {{latest_post.pub_date}}
-              <br>
+             
               {{latest_post.post_title}}
               <br>
                <div id="frame1">
-                  <div id = "frame">
+                  <!-- <div id = "frame"> -->
                     <img src="../../{{latest_post.image}}" height="300" weight="300" />
-                  </div>           
+                  <!-- </div>            -->
                 </div>
               <br> <br> 
               {{latest_post.post_text}}
+              <br> <br>
+              {{latest_post.pub_date}}
+              
             {% else %}
             <p> No posts available </p>
             {% endif %}
