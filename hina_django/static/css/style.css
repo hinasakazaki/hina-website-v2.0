@@ -21,6 +21,10 @@ body {
 	/*brown?*/
 }
 
+#title{
+	font-size:20;
+	color: #c04b59;
+}
 #header {
 	font-size:20;
 	z-index:5;
