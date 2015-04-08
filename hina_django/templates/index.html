@@ -28,7 +28,7 @@
 
     		<div class = "pink-block">
           <div class = "pinktext">  <a href = "/comix/">
-            Do you like webcomics? </a>
+            Do you like drawings? </a>
           </div>
          
             <div class="hinerz">
@@ -53,7 +53,9 @@
             {% if latest_post %}
               {{latest_post.pub_date}}
               <br> <br>
+              <div id= "title">
               {{latest_post.post_title}}
+            </div>
               <br> <br> 
               {{latest_post.post_text}}
             {% else %}
