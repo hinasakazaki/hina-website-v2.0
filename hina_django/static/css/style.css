@@ -23,6 +23,11 @@ body {
 
 #title{
 	font-size:19;
+	color: #4a161c;
+}
+
+#date{
+	font-size:17;
 	color: #d58790;
 }
 #header {

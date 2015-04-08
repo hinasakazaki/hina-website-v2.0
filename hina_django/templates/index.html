@@ -51,7 +51,9 @@
           
           {% else %}
             {% if latest_post %}
+            <div id="date">
               {{latest_post.pub_date}}
+            </div>
               <br> <br>
               <div id= "title">
               {{latest_post.post_title}}
