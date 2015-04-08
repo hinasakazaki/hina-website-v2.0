@@ -16,25 +16,28 @@
           
           {% else %}
             {% if latest_post %}
-             
+             <div id= "caption">
               {{latest_post.post_title}}
+            </div>
               <br>
               
                   <div id = "frame">
-                    <img src="../../{{latest_post.image}}" height="300" weight="300" />
+                    <img src="../../{{latest_post.image}}" />
                   </div>           
                   <br>
             
               <br> <br> 
+              <div id= "about-text">
               {{latest_post.post_text}}
+
               <br> <br>
               {{latest_post.pub_date}}
-              
+               </div>
             {% else %}
             <p> No posts available </p>
             {% endif %}
             <br> 
-            <div class="link"> <a href= "/comix/archive"> Archive of Comic Posts by hinerz</a> </div>
+            <div class="link"> <a href= "/comix/archive"> Archive of doodles by hinerz</a> </div>
           {% endif %}
           {% endautoescape %}
    </div>
