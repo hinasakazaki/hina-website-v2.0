@@ -3,6 +3,7 @@
 <!-- {% block css_file %}index.css{% endblock %} -->
 {% block js_file %}index.js{% endblock %}
 {% block content %}
+    {% if archives or latest_post%}
 		<div id = "box-wrapper">
     		<div class= "yellow-block">
           <div class = "yellowtext"> <a href="/projects/">
@@ -36,6 +37,8 @@
            </div>
              		</div>
     	</div>
+      {% endif %}
+
 
       <div id = "text">
           <div id = "brown">
