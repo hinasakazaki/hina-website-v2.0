@@ -1,9 +1,11 @@
 {% extends "base.html" %}
-{% block title %}Rants by Hina{% endblock %}
+{% block title %}Arts & Crafts by Hina{% endblock %}
 {% block css_file %}comix.css{% endblock %}
 {% block js_file %}comix.js{% endblock %}
 {% block content %}
     <div id="comic">
+       <br>
+       <br>
         {% autoescape off %}
           {% if archives %}
             {% if all_posts %}
